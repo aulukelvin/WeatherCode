@@ -20,9 +20,9 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class, loader = AnnotationConfigContextLoader.class)
-public class OpenWeatherMapRESTDriverTest {
+public class OpenWeatherMapRESTServiceTest {
     
-    public OpenWeatherMapRESTDriverTest() {
+    public OpenWeatherMapRESTServiceTest() {
     }
     
     @Autowired

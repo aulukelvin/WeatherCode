@@ -9,6 +9,7 @@ import aaa.bbb.ccc.codingtest.driver.OpenWeatherMapRESTService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import aaa.bbb.ccc.codingtest.driver.WeatherProviderService;
+import aaa.bbb.ccc.codingtest.frontend.FrontEndService;
 import aaa.bbb.ccc.codingtest.util.Util;
 import javax.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
@@ -37,6 +38,10 @@ public class AppConfig {
     @Bean
     public Util getUtil() {
         return new Util(URL_Template,defaultCity,defaultCountry,AppId);
+    }
+    @Bean
+    public FrontEndService getFronEndService() {
+        return new FrontEndService();
     }
     
     @Value("${OpenWeatherMap.Curret.URL_Template}")
