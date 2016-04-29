@@ -5,12 +5,15 @@
  */
 package aaa.bbb.ccc.codingtest.config;
 
+import aaa.bbb.ccc.codingtest.cache.CacheHelper;
+import aaa.bbb.ccc.codingtest.cache.CacheNames;
 import aaa.bbb.ccc.codingtest.driver.OpenWeatherMapRESTService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import aaa.bbb.ccc.codingtest.driver.WeatherProviderService;
 import aaa.bbb.ccc.codingtest.frontend.FrontEndService;
 import aaa.bbb.ccc.codingtest.util.Util;
+import com.google.common.cache.LoadingCache;
 import javax.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,6 +45,12 @@ public class AppConfig {
     @Bean
     public FrontEndService getFronEndService() {
         return new FrontEndService();
+    }
+    
+    @Bean
+    public LoadingCache<String,String> getCache() {
+        CacheHelper ch = new CacheHelper();
+        return ch.getCache(CacheNames.Current);
     }
     
     @Value("${OpenWeatherMap.Curret.URL_Template}")
