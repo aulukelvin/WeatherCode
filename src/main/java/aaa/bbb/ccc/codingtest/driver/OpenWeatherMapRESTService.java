@@ -5,9 +5,12 @@
  */
 package aaa.bbb.ccc.codingtest.driver;
 
+import aaa.bbb.ccc.codingtest.util.Util;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -15,6 +18,8 @@ import com.sun.jersey.api.client.WebResource;
  */
 public class OpenWeatherMapRESTService implements WeatherProviderService 
 {
+    @Autowired
+    Util util;
     @Override
     public void connect(){
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -23,9 +28,9 @@ public class OpenWeatherMapRESTService implements WeatherProviderService
     @Override
     public String getCurrent(String city, String country){
         Client client = Client.create();
-
+        String url = util.getURL(city, country);
         WebResource webResource = client
-           .resource("http://api.openweathermap.org/data/2.5/weather?q=2031,au&appid=96b5628bb8851ba401a3712a6cf06e25");
+           .resource(url);
 
         ClientResponse response = webResource.accept("application/json")
            .get(ClientResponse.class);
