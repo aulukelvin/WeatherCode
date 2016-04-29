@@ -18,14 +18,18 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
+            <artifactId>spring-test</artifactId>
+            <version>4.1.7.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>com.sun.jersey.archetypes</groupId>
-            <artifactId>jersey-archetypes</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
             <version>${jersey.version}</version>
-            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -44,11 +48,11 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <jdk.version>1.7</jdk.version>
-        <spring.version>3.2.13.RELEASE</spring.version>
+        <spring.version>4.1.7</spring.version>
         <log4j.version>1.2.17</log4j.version>
         <guava.version>19.0</guava.version>
         <gson.version>2.6.2</gson.version>
-        <jersey.version>1.11</jersey.version>
+        <jersey.version>1.8</jersey.version>
         
     </properties>
     <build>
