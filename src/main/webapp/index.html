@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>Index</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>It's running</div>
-    </body>
+<head>
+   <meta name="author" content="Ben Howdle and Dan Matthew">
+   <meta name="description" content="A responsive movie poster grabber">
+   <title>Weather infomation by Kelvin</title>
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+        <!--jQuery, linked from a CDN-->
+   <script src="scripts.js"></script>
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+   <header>
+      <h1>Weather infomation by Kelvin</h1>
+   </header>
+    <p>Type in the City name, or leave it blank to choose Sydney by default</p>
+   <section id="fetch" class='panel'>
+      <input type="text" placeholder="Sydney" id="city" />
+      <button id="search">Show me the current weather information</button>
+   </section>
+    <div  class="container" style="height: 300px;">
+        <section id="billboard">
+
+        </section>
+   </div>     
+   <footer>
+       This WebApp is based on OpenWeatherMap as the default service provider. 
+       <p/>
+       Feathers of this WebApp includes:
+       <p/>
+       1. a cache layer has been built to resolve the limit of the query frequency and speed. The free license of OpenWeatherMap only allows queries no sooner than 10 minutes, and the service is not fast. The added caching can dramatically enhance the user experience.<br/> The cache does synchronized loading for its first time loading and do asynchronized refresh afterwards.
+       <p/>
+       2. Information providers can be extended to others if it's in need by implements WeatherProviderService interface. Likewise, the web application can be extended to provide more service by implements functions, e.g. 5 days forecast, 16 days forecast.
+       <p/>
+       3. The frontend was built on top of rest api. So the GUI changes can be loosely coupled with the backend. Adn also, the rest API can be utilized by 3rd party applications as a benefit.
+   </footer>
+</div>
+</body>
 </html>

@@ -1,0 +1,277 @@
+/*
+    Document   : ticketing
+    Created on : 19/07/2011, 09:24:37
+    Author     : dev
+    Description:
+        Purpose of the stylesheet follows.
+Update by Antoine
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root {
+    display: block;
+}
+
+.container{
+    width:100%;
+}
+
+.separator, .title-holder, #utbFrmDiv h2, #utbFrmDiv .header td, #utbListDiv h2, #utbListDiv .tblHdg td, #utbFrmDiv .frmContactHdr, .frmContactHdr td{
+    height:20px;
+    line-height:20px;
+    border-right:1px solid #EAEAEA;
+	border-bottom:1px solid #EAEAEA;
+
+    margin:0 0 0px 0;
+    padding:0 0 0 5px;
+    vertical-align: middle;
+
+}
+
+.panel{
+    font-size:  16pt !important;
+    font-weight: normal;
+    color:#91121A !important;
+  	
+}
+
+
+.loginTable .textbox, .paymentTable .textbox, .customerTable  .textbox{
+    width: 195px;
+    background-image:url(../images/input_bg.jpg);
+    padding-left: 5px;
+    height:30px;
+    border: 0 !important;
+    font-family:Lucida Sans Unicode;
+    font-size:9.5pt;
+    font-weight:bold;
+    color:#616161;
+}
+
+.loginTable .textboxError, .paymentTable .textboxError, .customerTable  .textboxError{
+    width: 195px;
+    background-color:#F6C9CC;
+    background-image:url(../img/images/error_bg.jpg);
+    padding-left: 5px;
+    height:30px;
+    border: 0 !important;
+    font-family:Lucida Sans Unicode;
+    font-size:9.5pt;
+    font-weight:bold;
+    color:#616161;
+}
+
+.checkBox {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.checkBoxHover {
+    background-image:url(../img/images/check_hover.png) !important;
+}
+
+.checkBoxUnchecked {
+    background-image:url(../img/images/unchecked.png) !important;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.checkBoxChecked {
+    background-image:url(../img/images/checked.png) !important;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+tr.ui-state-hover .ui-widget-content {
+    color:#fff !important;
+}
+
+#createTicketTbl tr{
+    height:35px;
+}
+
+#roleTbl td:last-child{
+   /* padding-left: 24px;*/
+}
+
+#teamTbl td:last-child{
+    /*padding-left: 24px;*/
+}
+
+/*#userTbl td:last-child {
+    padding-left: 5px;
+}*/
+
+/*
+#userTbl tr td {
+    border-bottom: solid 1px green;
+} */
+
+.teamActionButton .ui-button, .roleActionButton .ui-button {
+    width:95%;
+    font-size: 7pt;
+    font-family: Lucida Sans Unicode !important;
+    margin:0 auto;
+}
+
+.subCatRadio .ui-button{
+    width:95%;
+    font-size: 7pt;
+    font-family: Lucida Sans Unicode !important;
+    margin:0 auto;
+    text-align:left;
+}
+
+#format .ui-button{
+    width:80% !important;
+    margin-bottom: 5px;
+    text-align:center;
+}
+
+.filters {
+    height:35px !important;
+    vertical-align: middle !important;
+
+
+}
+
+.filters td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    margin:0 auto !important;
+     border-width 	: 0 1px 0 0;
+    border-style 	: solid;
+    border-right-color: #327e04;
+
+
+}
+
+.filters td .selectbox {
+    width:95% !important;
+
+}
+
+.ui-dialog .ui-button-text {
+    font-size:12px !important;
+}
+
+
+.selectedButton a
+{
+    font: bold 11px Lucida Sans Unicode sans-serif !important;
+    background: transparent url('../images/ticketingNEW/checked.png') no-repeat;
+    display: block;
+    float: left;
+    width: 80%;
+    height:18px;
+    line-height: 20px;
+    text-align:center;
+    text-decoration: none;
+    padding-left:30px;
+	text-align:left;
+}
+
+.selectedButton_sub a
+{
+    font: bold 11px Lucida Sans Unicode sans-serif !important;
+    background: transparent url('../images/ticketingNEW/checked.png') no-repeat;
+    display: block;
+    float: left;
+    width: 80%;
+    line-height: 20px;
+    height:18px;
+    text-align:center;
+    text-decoration: none;
+    padding-left:30px;
+	margin-left:15px;
+	text-align:left;
+}
+.optionButton {
+    background: transparent url('../images/ticketingNEW/check_hover.png') no-repeat 0% 0%;
+    width: 80%;
+    height:18px;
+}
+.optionButton a
+{
+    font: bold 11px Lucida Sans Unicode sans-serif !important;
+    background: transparent url('../images/ticketingNEW/unchecked.png') no-repeat;
+    display: block;
+    float: left;
+    width: 80%;
+    line-height: 25px;
+    height:18px;
+    text-align:center;
+    text-decoration: none;
+    padding-left:30px;
+	text-align:left;
+}
+
+.optionButton_sub a
+{
+    font: bold 11px Lucida Sans Unicode sans-serif !important;
+    background: transparent url('../images/ticketingNEW/unchecked.png') no-repeat;
+    display: block;
+    float: left;
+    width: 80%;
+    line-height: 20px;
+    height:18px;
+    text-align:center;
+    text-decoration: none;
+    padding-left:30px;
+	margin-left:15px;
+	text-align:left;
+}
+
+
+.shadow{
+    -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: #666 0px 2px 3px;
+    -webkit-box-shadow: #666 0px 2px 3px;
+}
+
+.loading{
+    -moz-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: #666 0px 2px 0px;
+    -webkit-box-shadow: #666 0px 2px 0px;
+}
+
+.altRow {
+    background: #E4EBE7 url(ticketingNEW/custom-theme/images/gray_bg.png) 50% 50% repeat-x;
+}
+
+/* ADD start rlarena, dpadillo 20110429 change css properties(click) of preferences "Columns To Display" */
+.unchecked {
+    background: #E4EBE7 url(ticketingNEW/custom-theme/images/gray_bg.png) 50% 50% repeat-x !important;
+    border:1px solid #E4EBE7;
+    color: #2B441C !important;
+}
+/* ADD end rlarena, dpadillo 20110429 change css properties(click) of preferences "Columns To Display" */
+
+/* ADD start dpadillo 20110502 change css properties(hover) of preferences "Columns To Display" */
+.mouseOverPref {
+    background: #2EB473 url(ticketingNEW/custom-theme/images/ui-bg_highlight-soft_55_72b42d_1x100.png) 50% 50% repeat-x !important;
+}
+
+.mouseOutPref {
+    background: #E4EBE7 url(ticketingNEW/custom-theme/images/gray_bg.png) 50% 50% repeat-x;
+}
+/* ADD end dpadillo 20110502 change css properties(hover) of preferences "Columns To Display" */
+.textfield, .textfield input{
+	width:198px;
+	height:29px;
+}
+.textfield{
+	padding:0 5px;
+	background:url(../images/textfield-bg.gif) 0 0 no-repeat;
+}
+.textfield input{
+	background:none;
+	border:0;
+	line-height:29px;
+	font-size:14px;
+	color:#3f3f3f;
+}
