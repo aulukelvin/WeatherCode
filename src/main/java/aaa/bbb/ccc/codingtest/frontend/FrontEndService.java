@@ -9,6 +9,7 @@ import aaa.bbb.ccc.codingtest.config.AppConfig;
 import aaa.bbb.ccc.codingtest.driver.WeatherProviderService;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,16 @@ public class FrontEndService {
     WeatherProviderService providerService;
     
     @GET
+    @Path("/current/{city}")
+    @Produces({ MediaType.APPLICATION_JSON })
+    public String getCurrentWeatherByCityName(@PathParam("city") String _cityName) {
+        return providerService.getCurrent(_cityName, null);
+    }
+    
+    @GET
     @Path("/current")
     @Produces({ MediaType.APPLICATION_JSON })
-    public String getCurrentWeatherByCityName(String _cityName) {
-        return providerService.getCurrent(_cityName, null);
+    public String getCurrentWeatherByCityName() {
+        return providerService.getCurrent(null, null);
     }
 }
