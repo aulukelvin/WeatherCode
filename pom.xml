@@ -24,13 +24,66 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.1.7.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>        
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-spring</artifactId>
+            <version>${jersey.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aop</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-client</artifactId>
             <version>${jersey.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -48,30 +101,41 @@
             <version>6.4.0.Final</version>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-aop</artifactId>  
+            <version>${spring.version}</version>  
+        </dependency>  
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <jdk.version>1.7</jdk.version>
-        <spring.version>4.1.7</spring.version>
+        <spring.version>4.2.5.RELEASE</spring.version>
         <log4j.version>1.2.17</log4j.version>
         <guava.version>19.0</guava.version>
         <gson.version>2.6.2</gson.version>
-        <jersey.version>1.8</jersey.version>
+        <jersey.version>1.19</jersey.version>
         
     </properties>
     <build>
-	  <plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.3</version>
-			<configuration>
-				<source>${jdk.version}</source>
-				<target>${jdk.version}</target>
-			</configuration>
-		</plugin>
-          </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
